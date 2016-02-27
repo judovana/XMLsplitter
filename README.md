@@ -35,6 +35,7 @@ java -jar assembly/XMLcompare_assembly_mandatory.jar -orphanSeek -dual -silent -
 ```
 # ...output1...
 ```
+# java -jar dist/XMLsplitter.jar  -config=test/alpha.conf  -o=/tmp/ -i=test/alpha.xml 
 reading: /home/jvanek/NetBeansProjects/XMLsplitter/test/alpha.conf
 header xpath setted: /ss:Workbook/o:DocumentProperties | /ss:Workbook/x:ExcelWorkbook | /ss:Workbook/ss:Styles
 content xpath setted: /ss:Workbook/ss:Worksheet/ss:Table/ss:Column | /ss:Workbook/ss:Worksheet/ss:Table/ss:Row | /ss:Workbook/ss:Worksheet/x:WorksheetOptions
@@ -93,6 +94,7 @@ saving chunk 16 size 5127bytes in 3 chunks Total: 23118646 100%
 ```
 # ...output2...
 ```
+# java -jar dist/XMLjoiner.jar  -config=test/alpha.conf  -o /tmp/alpha_part_000*
 reading: /home/jvanek/NetBeansProjects/XMLjoiner/test/alpha.conf
 header xpath setted: /ss:Workbook/o:DocumentProperties | /ss:Workbook/x:ExcelWorkbook | /ss:Workbook/ss:Styles
 content xpath setted: /ss:Workbook/ss:Worksheet/ss:Table/ss:Column | /ss:Workbook/ss:Worksheet/ss:Table/ss:Row | /ss:Workbook/ss:Worksheet/x:WorksheetOptions
@@ -447,6 +449,7 @@ saved
 ```
 # ...output3...
 ```
+# java -jar assembly/XMLcompare_assembly_mandatory.jar -orphanSeek -dual -silent -failFast ~/NetBeansProjects/XMLsplitter/test/alpha.xml  ~/NetBeansProjects/XMLjoiner/alpha.xml
 checking /home/jvanek/NetBeansProjects/XMLjoiner/alpha.xml
 checking /home/jvanek/NetBeansProjects/XMLsplitter/test/alpha.xml
 files count: 2
