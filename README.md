@@ -1,6 +1,8 @@
 # XMLsplitter
 Tool to splitting xml files based on xpath headers, body and tails
 Note, the assembly jar dont have support of namesapces, you ne
+! commandline arguments are overwriteing values in configs!
+config files are expected to be shared between joiner and splitter
 
 Original webpage - http://xmlsplit.wz.cz/  (and http://xmlcompare.wz.cz/)
 
